@@ -14,9 +14,21 @@ The write should happen if RegWrite signal is made 1 and if there is positive ed
 */
 
 module REG_FILE(
+<<<<<<< HEAD
     input [4:0] read_reg_num1,
     input [4:0] read_reg_num2,
     input [4:0] write_reg,
+=======
+<<<<<<< HEAD
+    input [4:0] read_reg_num1,
+    input [4:0] read_reg_num2,
+    input [4:0] write_reg,
+=======
+    input [4:0] rs1,
+    input [4:0] rs2,
+    input [4:0] rd,
+>>>>>>> b43aa6a (v1.1.0)
+>>>>>>> 234b0e2 (v1.1.0)
     input [31:0] write_data,
     output [31:0] read_data1,
     output [31:0] read_data2,
@@ -31,8 +43,16 @@ module REG_FILE(
     //  When reset is triggered, we initialize the registers with some values
     always @(posedge reset)
     begin
+<<<<<<< HEAD
         // Bear with me for now, I tried using loops, but it won't work
         // Just duct-taping this for now
+=======
+<<<<<<< HEAD
+        // Bear with me for now, I tried using loops, but it won't work
+        // Just duct-taping this for now
+=======
+>>>>>>> b43aa6a (v1.1.0)
+>>>>>>> 234b0e2 (v1.1.0)
          reg_memory[0] = 32'h0;
          reg_memory[1] = 32'h1;
          reg_memory[2] = 32'h2;
@@ -59,7 +79,15 @@ module REG_FILE(
          reg_memory[23] = 32'h23;
          reg_memory[24] = 32'h24;
          reg_memory[25] = 32'h25;
+<<<<<<< HEAD
 		 reg_memory[26] = 32'h26;
+=======
+<<<<<<< HEAD
+		 reg_memory[26] = 32'h26;
+=======
+	 reg_memory[26] = 32'h26;
+>>>>>>> b43aa6a (v1.1.0)
+>>>>>>> 234b0e2 (v1.1.0)
          reg_memory[27] = 32'h27;
          reg_memory[28] = 32'h28;
          reg_memory[29] = 32'h29;
@@ -70,16 +98,41 @@ module REG_FILE(
 
     // The register file will always output the vaules corresponding to read register numbers 
     // It is independent of any other signal
+<<<<<<< HEAD
     assign read_data1 = reg_memory[read_reg_num1];
     assign read_data2 = reg_memory[read_reg_num2];
+=======
+<<<<<<< HEAD
+    assign read_data1 = reg_memory[read_reg_num1];
+    assign read_data2 = reg_memory[read_reg_num2];
+=======
+    assign read_data1 = reg_memory[rs1];
+    assign read_data2 = reg_memory[rs2];
+>>>>>>> b43aa6a (v1.1.0)
+>>>>>>> 234b0e2 (v1.1.0)
 
     // If clock edge is positive and regwrite is 1, we write data to specified register
     always @(posedge clock)
     begin
 
         if (regwrite) begin
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 234b0e2 (v1.1.0)
             reg_memory[write_reg] = write_data;
         end     
     end
 
+<<<<<<< HEAD
 endmodule
+=======
+endmodule
+=======
+            reg_memory[rd] = write_data;
+        end     
+    end
+
+endmodule
+>>>>>>> b43aa6a (v1.1.0)
+>>>>>>> 234b0e2 (v1.1.0)

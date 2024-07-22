@@ -16,6 +16,13 @@ ALU Control lines | Function
         0101    Shift right logical
         0110    Multiply
         0111    Bitwise-XOR
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+	1111	Convolution
+>>>>>>> b43aa6a (v1.1.0)
+>>>>>>> 234b0e2 (v1.1.0)
 */
 
 module ALU (
@@ -24,6 +31,20 @@ module ALU (
     output reg [31:0] alu_result,
     output reg zero_flag
 );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+wire [31:0] convol_res;
+
+convol_32bit convol(
+	.A(in1),
+	.B(in2),
+	.(convol_res));
+
+>>>>>>> b43aa6a (v1.1.0)
+>>>>>>> 234b0e2 (v1.1.0)
     always @(*)
     begin
         // Operating based on control input
@@ -43,6 +64,13 @@ module ALU (
         4'b0101: alu_result = in1>>in2;
         4'b0110: alu_result = in1*in2;
         4'b0111: alu_result = in1^in2;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+	4'b1111: alu_result = convol_res;
+>>>>>>> b43aa6a (v1.1.0)
+>>>>>>> 234b0e2 (v1.1.0)
 
         endcase
 
@@ -53,4 +81,12 @@ module ALU (
             zero_flag = 1'b0;
         
     end
+<<<<<<< HEAD
 endmodule
+=======
+<<<<<<< HEAD
+endmodule
+=======
+endmodule
+>>>>>>> b43aa6a (v1.1.0)
+>>>>>>> 234b0e2 (v1.1.0)

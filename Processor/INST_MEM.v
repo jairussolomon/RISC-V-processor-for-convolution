@@ -18,11 +18,25 @@ module INST_MEM(
     begin
         if(reset == 1)
         begin
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 234b0e2 (v1.1.0)
             // Setting 32-bit instruction: add t1, s0,s1 => 0x00940333 
             Memory[3] = 8'h00;
             Memory[2] = 8'h94;
             Memory[1] = 8'h03;
             Memory[0] = 8'h33;
+<<<<<<< HEAD
+=======
+=======
+            // Setting 32-bit instruction: CONVOL x8,x4,x12 => 0x010C0E0B =>
+            Memory[3] = 8'h01; 	//	0000000 10000 11000 000 11100 0001011					       		
+            Memory[2] = 8'h0C;	//	When PC  is == 32'd0 instr for convolution happens
+            Memory[1] = 8'h0E;
+            Memory[0] = 8'h0B;
+>>>>>>> b43aa6a (v1.1.0)
+>>>>>>> 234b0e2 (v1.1.0)
             // Setting 32-bit instruction: sub t2, s2, s3 => 0x413903b3
             Memory[7] = 8'h41;
             Memory[6] = 8'h39;
@@ -33,10 +47,23 @@ module INST_MEM(
             Memory[10] = 8'h5a;
             Memory[9] = 8'h02;
             Memory[8] = 8'hb3;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 234b0e2 (v1.1.0)
             // Setting 32-bit instruction: xor t3, s6, s7 => 0x017b4e33
             Memory[15] = 8'h01;
             Memory[14] = 8'h7b;
             Memory[13] = 8'h4e;
+<<<<<<< HEAD
+=======
+=======
+            // Setting 32-bit instruction: add t1, s0, s1 => 0x00940333
+	    Memory[15] = 8'h00;					
+            Memory[14] = 8'h94;
+            Memory[13] = 8'h03;		 
+>>>>>>> b43aa6a (v1.1.0)
+>>>>>>> 234b0e2 (v1.1.0)
             Memory[12] = 8'h33;
             // Setting 32-bit instruction: sll t4, s8, s9
             Memory[19] = 8'h01;
@@ -61,4 +88,12 @@ module INST_MEM(
         end
     end
 
+<<<<<<< HEAD
 endmodule
+=======
+<<<<<<< HEAD
+endmodule
+=======
+endmodule
+>>>>>>> b43aa6a (v1.1.0)
+>>>>>>> 234b0e2 (v1.1.0)
