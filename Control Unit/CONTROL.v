@@ -1,3 +1,4 @@
+//v1.1.0
 /* 
 Control unit controls takes opcode, funct7, funct3 of the instruction code to determine
 and control regwrite in IFU, alu control in ALU to execute proper instruction
