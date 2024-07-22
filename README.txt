@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 234b0e2 (v1.1.0)
+
 This is a simple 32-bit RISC-V processor that has an ALU and also capable to perform convolution of two signals.  
 
 
@@ -17,11 +14,3 @@ funct7  rs2  rs1  funct3 rd opcode
 Therefore in our scenario it will be
 
 00000000  rs2 rs1  000  rd  0001011
-
-
-<<<<<<< HEAD
-=======
-=======
- 
->>>>>>> b43aa6a (v1.1.0)
->>>>>>> 234b0e2 (v1.1.0)
